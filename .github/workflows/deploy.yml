@@ -10,6 +10,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - run: docker build -t subhanalom/Github-Actions .
+      - run: docker build -t subhanalom/github-actions .
       - run: echo "${{secrets.DOCKERHUB_PASSWORD}}" | docker login -u ${{secrets.DOCKERHUB_USERNAME}} --password-stdin
       - run: docker push subhanalom/github-actions:latest
